@@ -1,0 +1,21 @@
+:root {
+  font-family: 'Inter Variable', sans-serif;
+  color: #eeeFEB;
+  background: #111615;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --bg: #111615;
+  --surface: #19201e;
+  --text-primary: #eeefeb;
+  --text-secondary: #a0aaa4;
+  --accent: #8aead0;
+  --amber: #edba83;
+  --border: #ffffff16;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --content-max: 1600px;
+  --font-display: 'Space Grotesk Variable', sans-serif;
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+}

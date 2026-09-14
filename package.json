@@ -1,0 +1,30 @@
+{
+  "name": "defensa-tt-surchile",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --experimental-strip-types --test --test-isolation=none tests/presentation-state.test.ts",
+    "test:browser": "node scripts/check-browser.mjs",
+    "test:motion": "node --experimental-strip-types scripts/check-motion.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.6",
+    "@fontsource-variable/space-grotesk": "^5.2.10",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "playwright": "^1.55.0",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5"
+  }
+}

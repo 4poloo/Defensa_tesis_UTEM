@@ -1,0 +1,10 @@
+{
+  "type": "radial",
+  "center": "Middleware confiable",
+  "pillars": [
+    "Validación",
+    "Idempotencia",
+    "Errores / reproceso",
+    "Trazabilidad"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "type": "sequence",
+  "participants": [
+    "Invas",
+    "API Gateway",
+    "Lambda listener",
+    "DynamoDB",
+    "SNS",
+    "Lambda handler PT",
+    "S3",
+    "Softland"
+  ],
+  "messages": [
+    [
+      "Invas",
+      "API Gateway",
+      "JSON PT"
+    ],
+    [
+      "API Gateway",
+      "Lambda listener",
+      "invoke"
+    ],
+    [
+      "Lambda listener",
+      "Lambda listener",
+      "validar estructura/reglas"
+    ],
+    [
+      "Lambda listener",
+      "DynamoDB",
+      "verificar identificador"
+    ],
+    [
+      "DynamoDB",
+      "Lambda listener",
+      "nuevo / procesado"
+    ],
+    [
+      "Lambda listener",
+      "SNS",
+      "publicar si es nuevo"
+    ],
+    [
+      "SNS",
+      "Lambda handler PT",
+      "activar"
+    ],
+    [
+      "Lambda handler PT",
+      "Lambda handler PT",
+      "JSON → XML"
+    ],
+    [
+      "Lambda handler PT",
+      "S3",
+      "guardar XML"
+    ],
+    [
+      "S3",
+      "Softland",
+      "procesamiento posterior"
+    ]
+  ],
+  "alternate": "Si DynamoDB indica ya procesado, detener y mostrar evento ignorado; no generar segundo movimiento."
+}

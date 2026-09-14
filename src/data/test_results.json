@@ -1,0 +1,27 @@
+{
+  "performance_scope_note": "Validación operacional con cargas representativas; no benchmark formal de alto volumen.",
+  "volumes": [
+    {
+      "flow": "Declarar PT",
+      "approx_events": 10
+    },
+    {
+      "flow": "Consumir MP",
+      "approx_events": 5
+    },
+    {
+      "flow": "Despacho Express multi-línea",
+      "approx_events": 5
+    },
+    {
+      "flow": "Generación OS Softland → Invas",
+      "approx_events": 5
+    }
+  ],
+  "observations": {
+    "aws_processing": "Aproximadamente 1–2 segundos en casos analizados de Declarar PT y Consumir MP.",
+    "e2e": "Puede tardar algunos minutos por procesamiento secuencial posterior de Softland.",
+    "softland_rate": "Aproximadamente 10 archivos/minuto observado; variable y no SLA.",
+    "operational_reference": "Actividades de traspaso de 30–60 minutos pasaron a pocos minutos, normalmente <= ~5 min; estimación operacional no instrumentada."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Softland → Invas",
+    "viewBox": [
+      870,
+      300
+    ],
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "softland",
+      "label": "Softland ERP",
+      "sublabel": "XML",
+      "type": "external",
+      "pos": [
+        20,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "s3",
+      "label": "S3",
+      "sublabel": "Evento de objeto",
+      "type": "cloud",
+      "pos": [
+        250,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "lambda",
+      "label": "Lambda S3",
+      "sublabel": "XML → JSON",
+      "type": "backend",
+      "pos": [
+        480,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "invas",
+      "label": "Invas WMS",
+      "sublabel": "Recepción JSON",
+      "type": "external",
+      "pos": [
+        710,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "aws-ida-0",
+      "from": "softland",
+      "to": "s3",
+      "variant": "emphasis"
+    },
+    {
+      "id": "aws-ida-1",
+      "from": "s3",
+      "to": "lambda",
+      "variant": "emphasis"
+    },
+    {
+      "id": "aws-ida-2",
+      "from": "lambda",
+      "to": "invas",
+      "variant": "emphasis"
+    }
+  ]
+}

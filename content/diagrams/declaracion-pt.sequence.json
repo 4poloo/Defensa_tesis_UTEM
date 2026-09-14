@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Declaración de producto terminado",
+    "viewBox": [
+      1080,
+      650
+    ],
+    "column_fit": "spread",
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "participants": [
+    {
+      "id": "invas",
+      "label": "Invas",
+      "type": "external"
+    },
+    {
+      "id": "api",
+      "label": "API Gateway",
+      "type": "backend"
+    },
+    {
+      "id": "listener",
+      "label": "Lambda App",
+      "type": "backend",
+      "sublabel": "Validación"
+    },
+    {
+      "id": "dedupe",
+      "label": "DynamoDB",
+      "type": "database"
+    },
+    {
+      "id": "sns",
+      "label": "SNS",
+      "type": "messagebus"
+    },
+    {
+      "id": "handler",
+      "label": "Handler PT",
+      "type": "backend",
+      "sublabel": "JSON → XML"
+    },
+    {
+      "id": "s3",
+      "label": "S3 / archivos",
+      "type": "backend"
+    },
+    {
+      "id": "softland",
+      "label": "Softland",
+      "type": "external"
+    }
+  ],
+  "messages": [
+    {
+      "id": "pt-1",
+      "from": "invas",
+      "to": "api",
+      "y": 170,
+      "label": "Evento JSON",
+      "variant": "emphasis"
+    },
+    {
+      "id": "pt-2",
+      "from": "api",
+      "to": "listener",
+      "y": 213,
+      "label": "Recepción",
+      "variant": "emphasis"
+    },
+    {
+      "id": "pt-4",
+      "from": "listener",
+      "to": "dedupe",
+      "y": 299,
+      "label": "Identificador",
+      "variant": "emphasis"
+    },
+    {
+      "id": "pt-5",
+      "from": "dedupe",
+      "to": "listener",
+      "y": 342,
+      "label": "Nuevo",
+      "variant": "emphasis"
+    },
+    {
+      "id": "pt-6",
+      "from": "listener",
+      "to": "sns",
+      "y": 385,
+      "label": "Publicación",
+      "variant": "emphasis"
+    },
+    {
+      "id": "pt-7",
+      "from": "sns",
+      "to": "handler",
+      "y": 428,
+      "label": "Derivación",
+      "variant": "emphasis"
+    },
+    {
+      "id": "pt-9",
+      "from": "handler",
+      "to": "s3",
+      "y": 514,
+      "label": "Guardar XML",
+      "variant": "emphasis"
+    },
+    {
+      "id": "pt-10",
+      "from": "s3",
+      "to": "softland",
+      "y": 557,
+      "label": "Intercambio / lectura",
+      "variant": "emphasis"
+    }
+  ]
+}

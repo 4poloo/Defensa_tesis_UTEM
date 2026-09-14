@@ -1,0 +1,15 @@
+node_modules/
+dist/
+artifacts/
+tools/archify/
+*.tsbuildinfo
+.DS_Store
+
+# Documentos originales con datos personales: conservar solo localmente.
+content/sources/*.docx
+content/package/sources/legacy/*.pdf
+
+# Credenciales y configuración local.
+.env
+.env.*
+!.env.example

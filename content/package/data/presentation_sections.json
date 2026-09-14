@@ -1,0 +1,100 @@
+{
+  "sections": [
+    {
+      "id": "hero",
+      "index": 1,
+      "title": "Integración WMS y ERP",
+      "maxStep": 2
+    },
+    {
+      "id": "context",
+      "index": 2,
+      "title": "Dos sistemas, una operación",
+      "maxStep": 3
+    },
+    {
+      "id": "problem",
+      "index": 3,
+      "title": "El usuario como middleware",
+      "maxStep": 4
+    },
+    {
+      "id": "objective",
+      "index": 4,
+      "title": "Objetivo y alcance",
+      "maxStep": 3
+    },
+    {
+      "id": "as-is-to-be",
+      "index": 5,
+      "title": "AS-IS → TO-BE",
+      "maxStep": 6
+    },
+    {
+      "id": "business-flows",
+      "index": 6,
+      "title": "Procesos integrados",
+      "maxStep": 3
+    },
+    {
+      "id": "system-context",
+      "index": 7,
+      "title": "Contexto del sistema",
+      "maxStep": 4
+    },
+    {
+      "id": "aws-architecture",
+      "index": 8,
+      "title": "Arquitectura AWS",
+      "maxStep": 4
+    },
+    {
+      "id": "e2e-pt",
+      "index": 9,
+      "title": "E2E Declaración PT",
+      "maxStep": 10
+    },
+    {
+      "id": "engineering-controls",
+      "index": 10,
+      "title": "Controles de ingeniería",
+      "maxStep": 4
+    },
+    {
+      "id": "testing",
+      "index": 11,
+      "title": "Estrategia de pruebas",
+      "maxStep": 7
+    },
+    {
+      "id": "evidence",
+      "index": 12,
+      "title": "Evidencia E2E",
+      "maxStep": 5
+    },
+    {
+      "id": "pilot",
+      "index": 13,
+      "title": "Piloto y estabilización",
+      "maxStep": 6
+    },
+    {
+      "id": "results",
+      "index": 14,
+      "title": "Resultados",
+      "maxStep": 4
+    },
+    {
+      "id": "conclusions",
+      "index": 15,
+      "title": "Conclusiones",
+      "maxStep": 5
+    },
+    {
+      "id": "questions",
+      "index": 16,
+      "title": "Preguntas",
+      "maxStep": 1
+    }
+  ]
+}

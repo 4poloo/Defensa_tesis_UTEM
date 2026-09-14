@@ -1,0 +1,40 @@
+{
+  "reception": {
+    "label": "Recepción",
+    "steps": [
+      "Softland OR/OC (XML)",
+      "Middleware",
+      "Invas ASN (JSON)",
+      "Recepción física",
+      "VERIFICARASN (JSON)",
+      "Middleware",
+      "Softland RE (XML)"
+    ]
+  },
+  "production": {
+    "label": "Producción y materiales",
+    "steps": [
+      "OT / planificación",
+      "Invas",
+      "Picking MP",
+      "Consumo / devolución / merma",
+      "Evento JSON",
+      "Middleware",
+      "XML Softland",
+      "Declaración PT"
+    ],
+    "note": "La creación de OT puede apoyarse en plataforma complementaria debido a restricciones de Softland; no representarla como integración nativa directa si no corresponde."
+  },
+  "dispatch": {
+    "label": "Despacho",
+    "steps": [
+      "Softland OD/NV (XML)",
+      "Middleware",
+      "Invas OS (JSON)",
+      "Picking / entrega",
+      "Despacho Express (JSON)",
+      "Middleware",
+      "Softland EN/DEC (XML)"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+Estos documentos son históricos/preliminares. Para arquitectura final y resultados, CONTENT_MASTER_TT_WEB.md y el informe final tienen prioridad. El anteproyecto menciona SQS/Step Functions como recursos previstos, pero NO deben presentarse como parte de la implementación final.

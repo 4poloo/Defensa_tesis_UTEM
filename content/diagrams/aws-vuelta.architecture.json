@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Invas → Softland",
+    "viewBox": [
+      1320,
+      300
+    ],
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "invas",
+      "label": "Invas WMS",
+      "sublabel": "JSON",
+      "type": "external",
+      "pos": [
+        20,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "api",
+      "label": "API Gateway",
+      "sublabel": "HTTP",
+      "type": "cloud",
+      "pos": [
+        210,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "listener",
+      "label": "Lambda App",
+      "sublabel": "Validación",
+      "type": "backend",
+      "pos": [
+        400,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "sns",
+      "label": "SNS",
+      "sublabel": "Distribución",
+      "type": "messagebus",
+      "pos": [
+        590,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "handler",
+      "label": "Handler",
+      "sublabel": "JSON → XML",
+      "type": "backend",
+      "pos": [
+        780,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "s3",
+      "label": "S3 / archivos",
+      "sublabel": "Intercambio",
+      "type": "cloud",
+      "pos": [
+        970,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    },
+    {
+      "id": "softland",
+      "label": "Softland ERP",
+      "sublabel": "Procesamiento",
+      "type": "external",
+      "pos": [
+        1160,
+        100
+      ],
+      "size": [
+        140,
+        90
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "aws-vuelta-0",
+      "from": "invas",
+      "to": "api",
+      "variant": "emphasis"
+    },
+    {
+      "id": "aws-vuelta-1",
+      "from": "api",
+      "to": "listener",
+      "variant": "emphasis"
+    },
+    {
+      "id": "aws-vuelta-2",
+      "from": "listener",
+      "to": "sns",
+      "variant": "emphasis"
+    },
+    {
+      "id": "aws-vuelta-3",
+      "from": "sns",
+      "to": "handler",
+      "variant": "emphasis"
+    },
+    {
+      "id": "aws-vuelta-4",
+      "from": "handler",
+      "to": "s3",
+      "variant": "emphasis"
+    },
+    {
+      "id": "aws-vuelta-5",
+      "from": "s3",
+      "to": "softland",
+      "variant": "emphasis"
+    }
+  ]
+}

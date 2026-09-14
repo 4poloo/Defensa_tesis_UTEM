@@ -1,0 +1,7 @@
+sku,product,difference_pct,month,cause
+301002,Detergente 10 L,38,Jun 2025,Diferencias en PT declarado e inventariado en ERP
+201041,Agua Verde 10 L,42,May 2025,Error humano al cargar WMS y posterior carga a ERP
+201043,Agua Verde 5 L,33,Abr 2025,Carga manual en ERP
+201056,Anticongelante –12 GL,29,Jul 2025,Error humano al cargar WMS y posterior carga a ERP
+301021,Lavalozas 5 L,47,Jun 2025,Pick duplicado sin cierre OS
+900162,Aceite STIHL 500 cc,36,Jun 2025,Declaración PT incompleta

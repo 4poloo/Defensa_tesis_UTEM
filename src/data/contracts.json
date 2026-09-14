@@ -1,0 +1,52 @@
+{
+  "contracts": [
+    {
+      "flow": "Recepción esperada",
+      "direction": "Softland → Invas",
+      "source_contract": "XML OR / OC",
+      "target_contract": "JSON ASN"
+    },
+    {
+      "flow": "Recepción real",
+      "direction": "Invas → Softland",
+      "source_contract": "JSON VERIFICARASN",
+      "target_contract": "XML RE"
+    },
+    {
+      "flow": "Devolución asociada a recepción",
+      "direction": "Invas → Softland",
+      "source_contract": "JSON DEVOLVERASN",
+      "target_contract": "XML AJ / AJS según motivo"
+    },
+    {
+      "flow": "Consumo de materia prima",
+      "direction": "Invas → Softland",
+      "source_contract": "JSON consumo MP / LPN",
+      "target_contract": "XML AJ / AJS / STI"
+    },
+    {
+      "flow": "Devolución de materia prima",
+      "direction": "Invas → Softland",
+      "source_contract": "JSON DEVCLI / EOT",
+      "target_contract": "XML AJ / AJS / EOT"
+    },
+    {
+      "flow": "Declaración de producto terminado",
+      "direction": "Invas → Softland",
+      "source_contract": "JSON PT",
+      "target_contract": "XML AJ / AJS / EOT"
+    },
+    {
+      "flow": "Despacho esperado",
+      "direction": "Softland → Invas",
+      "source_contract": "XML OD basado en NV",
+      "target_contract": "JSON OS"
+    },
+    {
+      "flow": "Entrega real / despacho",
+      "direction": "Invas → Softland",
+      "source_contract": "JSON Despacho Express",
+      "target_contract": "XML EN / DEC"
+    }
+  ]
+}

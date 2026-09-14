@@ -1,0 +1,31 @@
+a990bd8605985a98  README_START_HERE.md
+e63e2eeefa825e05  assets/missing/README.md
+37a00646d7be5c1a  assets/reference/as-is-despachos.png
+203709ad235fca02  assets/reference/as-is-ot.png
+35fb72ab1365f6b3  assets/reference/as-is-produccion.png
+738e292b10e47a84  assets/reference/as-is-recepcion.png
+58d8933bf9c6b363  assets/reference/utem-logo.png
+7297e26d9be254b4  data/architecture.json
+e628c412e101489a  data/baseline_discrepancies.csv
+17e107918a880f31  data/baseline_discrepancies.json
+bbfb3e3a42104213  data/business_flows.json
+72dc795f0c3e03f1  data/contracts.json
+455cc744c0598734  data/presentation_sections.json
+906d42a3612a8698  data/reconciliation.json
+e4ef3dc1f2400fb7  data/test_results.json
+43acbd7878175deb  diagram_specs/01_as_is_to_be.json
+bbfb3e3a42104213  diagram_specs/02_business_flows.json
+b72bbe36d6d80e9b  diagram_specs/03_c4_context.json
+7297e26d9be254b4  diagram_specs/04_aws_architecture.json
+377c6bb7770f1242  diagram_specs/05_e2e_pt.json
+8a32f2e2e3f31ce3  diagram_specs/06_engineering_controls.json
+19a44a879d44e410  docs/ASSETS_MANIFEST.md
+e6456bd0c521f38c  docs/CODEX_IMPLEMENTATION_PLAN.md
+7bfd81a475eaf52e  docs/CONTENT_MASTER_TT_WEB.md
+f4b96d84043bfaad  docs/DIAGRAMAS_Y_MOTION.md
+b3ae17004c787056  docs/GUION_ORAL_BASE.md
+246a8d74c703bdfb  docs/SOURCE_MAP.md
+3af904c9a624dfff  docs/SPEC_PRESENTACION_TT_WEB.md
+7e9c962b1bfa2668  sources/legacy/Anteproyecto TT1.pdf
+93d163cb2bb8ab16  sources/legacy/Avance 1 _ TT1 - Olave Maximiliano.pdf
+97cfb3d788cd0666  sources/legacy/README.md

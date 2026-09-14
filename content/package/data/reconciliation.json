@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "flow": "Declarar PT",
+      "invas": "SKU 101006, 120 unidades",
+      "softland": "Entrada 120",
+      "result": "Conciliado"
+    },
+    {
+      "flow": "Consumir MP",
+      "invas": "SKU 801007, 7500 unidades",
+      "softland": "Salida 7500",
+      "result": "Conciliado"
+    },
+    {
+      "flow": "Recepción real",
+      "invas": "Cantidad recibida en ASN",
+      "softland": "Entrada RE equivalente",
+      "result": "Conciliado"
+    },
+    {
+      "flow": "Despacho",
+      "invas": "Cantidad despachada",
+      "softland": "Salida EN equivalente",
+      "result": "Conciliado"
+    }
+  ]
+}

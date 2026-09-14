@@ -1,0 +1,48 @@
+{
+  "methodology_note": "Valores estimativos a partir de diferencias reales detectadas en operación previa; referencia base TT-I, no auditoría contable.",
+  "historical_context": "Diferencias promedio de 30–40% y casos puntuales por sobre 120% durante el periodo manual/no integrado.",
+  "items": [
+    {
+      "sku": "301002",
+      "product": "Detergente 10 L",
+      "difference_pct": 38,
+      "month": "Jun 2025",
+      "cause": "Diferencias en PT declarado e inventariado en ERP"
+    },
+    {
+      "sku": "201041",
+      "product": "Agua Verde 10 L",
+      "difference_pct": 42,
+      "month": "May 2025",
+      "cause": "Error humano al cargar WMS y posterior carga a ERP"
+    },
+    {
+      "sku": "201043",
+      "product": "Agua Verde 5 L",
+      "difference_pct": 33,
+      "month": "Abr 2025",
+      "cause": "Carga manual en ERP"
+    },
+    {
+      "sku": "201056",
+      "product": "Anticongelante –12 GL",
+      "difference_pct": 29,
+      "month": "Jul 2025",
+      "cause": "Error humano al cargar WMS y posterior carga a ERP"
+    },
+    {
+      "sku": "301021",
+      "product": "Lavalozas 5 L",
+      "difference_pct": 47,
+      "month": "Jun 2025",
+      "cause": "Pick duplicado sin cierre OS"
+    },
+    {
+      "sku": "900162",
+      "product": "Aceite STIHL 500 cc",
+      "difference_pct": 36,
+      "month": "Jun 2025",
+      "cause": "Declaración PT incompleta"
+    }
+  ]
+}

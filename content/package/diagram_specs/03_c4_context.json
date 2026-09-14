@@ -1,0 +1,41 @@
+{
+  "type": "system-context",
+  "nodes": [
+    "Administración / Contabilidad",
+    "Bodega / Producción / Despacho",
+    "TI",
+    "Softland ERP",
+    "Middleware AWS",
+    "Invas WMS"
+  ],
+  "edges": [
+    [
+      "Administración / Contabilidad",
+      "Softland ERP"
+    ],
+    [
+      "Bodega / Producción / Despacho",
+      "Invas WMS"
+    ],
+    [
+      "TI",
+      "Middleware AWS"
+    ],
+    [
+      "Softland ERP",
+      "Middleware AWS"
+    ],
+    [
+      "Middleware AWS",
+      "Softland ERP"
+    ],
+    [
+      "Middleware AWS",
+      "Invas WMS"
+    ],
+    [
+      "Invas WMS",
+      "Middleware AWS"
+    ]
+  ]
+}

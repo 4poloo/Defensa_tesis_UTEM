@@ -1,0 +1,76 @@
+{
+  "final_implementation_warning": "SQS y Step Functions no forman parte de la implementación final defendida.",
+  "components": [
+    {
+      "id": "softland",
+      "label": "Softland ERP",
+      "role": "Sistema administrativo/contable; genera/consume XML"
+    },
+    {
+      "id": "invas",
+      "label": "Invas WMS",
+      "role": "Sistema operativo de bodega; emite/consume JSON"
+    },
+    {
+      "id": "api_gateway",
+      "label": "API Gateway",
+      "role": "Endpoints HTTP para eventos desde Invas"
+    },
+    {
+      "id": "lambda_listener",
+      "label": "Lambda listener",
+      "role": "Recepción y validaciones iniciales"
+    },
+    {
+      "id": "dynamodb",
+      "label": "DynamoDB",
+      "role": "Idempotencia mediante identificadores naturales"
+    },
+    {
+      "id": "sns",
+      "label": "SNS",
+      "role": "Distribución de eventos Invas hacia procesadores"
+    },
+    {
+      "id": "lambda_processor",
+      "label": "Lambda procesadora",
+      "role": "Clasificación y transformación JSON→XML"
+    },
+    {
+      "id": "s3",
+      "label": "Amazon S3",
+      "role": "Entrada/salida/procesados/errores XML"
+    },
+    {
+      "id": "s3_event",
+      "label": "S3 Event",
+      "role": "Trigger de XML generado por Softland"
+    },
+    {
+      "id": "lambda_s3",
+      "label": "Lambda S3",
+      "role": "Lectura/validación/transformación XML→JSON"
+    },
+    {
+      "id": "cloudwatch",
+      "label": "CloudWatch",
+      "role": "Logs, errores y trazabilidad"
+    }
+  ],
+  "softland_to_invas": [
+    "softland",
+    "s3",
+    "s3_event",
+    "lambda_s3",
+    "invas"
+  ],
+  "invas_to_softland": [
+    "invas",
+    "api_gateway",
+    "lambda_listener",
+    "sns",
+    "lambda_processor",
+    "s3",
+    "softland"
+  ]
+}

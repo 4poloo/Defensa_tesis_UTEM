@@ -1,0 +1,59 @@
+{
+  "type": "workflow-transform",
+  "as_is": {
+    "nodes": [
+      "Softland ERP",
+      "Usuario",
+      "Excel / registro manual",
+      "Invas WMS"
+    ],
+    "edges": [
+      [
+        "Softland ERP",
+        "Usuario"
+      ],
+      [
+        "Usuario",
+        "Excel / registro manual"
+      ],
+      [
+        "Excel / registro manual",
+        "Invas WMS"
+      ]
+    ]
+  },
+  "to_be": {
+    "nodes": [
+      "Softland ERP",
+      "Middleware",
+      "Invas WMS"
+    ],
+    "edges": [
+      [
+        "Softland ERP",
+        "Middleware"
+      ],
+      [
+        "Middleware",
+        "Softland ERP"
+      ],
+      [
+        "Middleware",
+        "Invas WMS"
+      ],
+      [
+        "Invas WMS",
+        "Middleware"
+      ]
+    ]
+  },
+  "steps": [
+    "show_as_is",
+    "highlight_user",
+    "fade_manual",
+    "reposition_systems",
+    "spawn_middleware",
+    "reconnect_bidirectional",
+    "show_capabilities"
+  ]
+}

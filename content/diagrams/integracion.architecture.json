@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Una integración bidireccional",
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "views": [
+      {
+        "id": "administracion-operacion",
+        "label": "Softland → Invas",
+        "focus": [
+          "softland-erp",
+          "middleware-tt",
+          "invas-wms"
+        ],
+        "note": "El middleware transforma y valida el intercambio entre ambos sistemas."
+      },
+      {
+        "id": "operacion-administracion",
+        "label": "Invas → Softland",
+        "focus": [
+          "invas-wms",
+          "middleware-tt",
+          "softland-erp"
+        ],
+        "note": "Los eventos operacionales retornan al sistema administrativo."
+      }
+    ],
+    "legend": {
+      "mode": "hidden"
+    },
+    "viewBox": [
+      730,
+      280
+    ]
+  },
+  "components": [
+    {
+      "id": "softland-erp",
+      "type": "external",
+      "label": "Softland ERP",
+      "sublabel": "Administración e inventario",
+      "pos": [
+        20,
+        90
+      ],
+      "size": [
+        170,
+        100
+      ]
+    },
+    {
+      "id": "middleware-tt",
+      "type": "backend",
+      "label": "Middleware",
+      "sublabel": "Transformación XML ↔ JSON",
+      "pos": [
+        270,
+        90
+      ],
+      "size": [
+        170,
+        100
+      ]
+    },
+    {
+      "id": "invas-wms",
+      "type": "external",
+      "label": "Invas WMS",
+      "sublabel": "Operación física de bodega",
+      "pos": [
+        520,
+        90
+      ],
+      "size": [
+        170,
+        100
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "xml-entrada",
+      "from": "softland-erp",
+      "to": "middleware-tt",
+      "label": "XML",
+      "variant": "emphasis"
+    },
+    {
+      "id": "json-salida",
+      "from": "middleware-tt",
+      "to": "invas-wms",
+      "label": "JSON",
+      "variant": "emphasis",
+      "labelDy": 34
+    },
+    {
+      "id": "json-entrada",
+      "from": "invas-wms",
+      "to": "middleware-tt",
+      "label": "JSON",
+      "variant": "emphasis"
+    },
+    {
+      "id": "xml-salida",
+      "from": "middleware-tt",
+      "to": "softland-erp",
+      "label": "XML",
+      "variant": "emphasis",
+      "labelDy": 34
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Validación",
+      "items": [
+        "Estructura y reglas de negocio por transacción."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Idempotencia",
+      "items": [
+        "Identificar reenvíos y evitar movimientos duplicados."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Trazabilidad",
+      "items": [
+        "Relacionar el evento, el archivo y el resultado en destino."
+      ]
+    }
+  ]
+}
